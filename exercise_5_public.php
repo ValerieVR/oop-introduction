@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
 /* EXERCISE 5
 Copy the class of exercise 1.
 change the properties to private.
