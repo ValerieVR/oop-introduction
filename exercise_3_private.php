@@ -13,6 +13,21 @@ Make sure that u use the variables and not just this text line.
 Print this method on the screen on a new line.
 USE TYPEHINTING EVERYWHERE!
 */
+class Beverage {
+
+    public $color, $price, $temperature;
+
+    public function __construct(string $color, float $price, string $temperature = "cold") {
+        $this->color = $color;
+        $this->price = $price;
+        $this->temperature = $temperature;
+    }
+
+    function getInfo() :string { 
+        return "This beverage is {$this->color} and {$this->temperature}.<br>";
+    }
+    
+}
 
 class Beer extends Beverage {
     
