@@ -20,14 +20,14 @@
 
         public $color, $price, $temperature;
 
-        function __construct(string $color, float $price) {
+        function __construct(string $color, float $price, string $temperature = "cold") {
             $this->color = $color;
             $this->price = $price;
-            $this->temperature = "cold";
+            $this->temperature = $temperature;
         }
 
-        function getInfo() {
-            return "This beverage is $this->color and $this->temperature.<br>";
+        function getInfo() :string { 
+            return "This beverage is {$this->color} and {$this->temperature}.<br>";
         }
     }
 
