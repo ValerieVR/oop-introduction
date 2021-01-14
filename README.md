@@ -1,2 +1,2 @@
 # OOP Introduction :mag:
-This repository holds exercises to explore Object-Oriented Programming.
+This repository contains exercises to explore Object-Oriented Programming.
