@@ -1,5 +1,11 @@
 <?php
+    
     declare(strict_types=1);
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+    
+
 
     require "exercise_1_classes.php";
     require "exercise_2_extending.php";
@@ -21,6 +27,13 @@
     echo $cola->temperature;
 
     new_exercise(2);
+    $duvel = new Beer("blonde", 3.5, "Duvel", 8.5);
+    echo $duvel->color . "<br>";
+    echo $duvel->getInfo();
+    echo $duvel->getAlcoholpercentage();
+    echo $cola->getAlcoholpercentage();
+    
+
     new_exercise(3);
     new_exercise(4);
     new_exercise(5);

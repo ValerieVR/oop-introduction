@@ -2,8 +2,6 @@
 
     declare(strict_types=1);
 
-    
-
     /* EXERCISE 1
     Create a class beverage.
     Create the properties color (string), price (float) and temperature (string) and also foresee a construct.
@@ -20,7 +18,7 @@
 
         public $color, $price, $temperature;
 
-        function __construct(string $color, float $price, string $temperature = "cold") {
+        public function __construct(string $color, float $price, string $temperature = "cold") {
             $this->color = $color;
             $this->price = $price;
             $this->temperature = $temperature;
@@ -29,5 +27,6 @@
         function getInfo() :string { 
             return "This beverage is {$this->color} and {$this->temperature}.<br>";
         }
+        
     }
 

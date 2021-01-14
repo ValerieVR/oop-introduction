@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+
+
 /* EXERCISE 2
 Make class beer that extends from Beverage.
 Create the properties name (string) and alcoholpercentage (float).
@@ -15,3 +17,20 @@ Make sure that each print is on a different line.
 Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholpercentage() in /var/www/becode/workshop/exercise2.php on line 64
 USE TYPEHINTING EVERYWHERE!
 */
+
+class Beer extends Beverage {
+    
+    public $name;
+    public $alcoholpercentage;
+
+    public function __construct(string $color, float $price, string $name, float $alcoholpercentage) {
+        parent::__construct($color, $price);
+        $this->name = $name;
+        $this->alcoholpercentage = $alcoholpercentage;
+    }
+
+    function getAlcoholpercentage() {
+        return $this->alcoholpercentage ."%";
+    }
+
+}
