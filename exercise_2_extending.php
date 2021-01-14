@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-
-
 /* EXERCISE 2
 Make class beer that extends from Beverage.
 Create the properties name (string) and alcoholpercentage (float).
@@ -34,3 +32,9 @@ class Beer extends Beverage {
     }
 
 }
+
+$duvel = new Beer("blonde", 3.5, "Duvel", 8.5);
+echo $duvel->color . "<br>";
+echo $duvel->getInfo();
+echo $duvel->getAlcoholpercentage();
+echo $cola->getAlcoholpercentage();

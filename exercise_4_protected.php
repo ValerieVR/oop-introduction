@@ -8,3 +8,20 @@ Make all properties protected.
 Make all the other prints work without error without changing the beverage class.
 USE TYPEHINTING EVERYWHERE!
 */
+
+class Beer extends Beverage {
+    
+    public $name;
+    public $alcoholpercentage;
+
+    public function __construct(string $color, float $price, string $name, float $alcoholpercentage) {
+        parent::__construct($color, $price);
+        $this->name = $name;
+        $this->alcoholpercentage = $alcoholpercentage;
+    }
+
+    function getAlcoholpercentage() {
+        return $this->alcoholpercentage ."%";
+    }
+
+}
