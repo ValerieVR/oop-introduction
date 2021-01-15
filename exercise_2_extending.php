@@ -20,3 +20,45 @@ Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefi
 USE TYPEHINTING EVERYWHERE!
 */
 
+class Beverage {
+
+    public $color, $price, $temperature;
+
+    public function __construct(string $color, float $price, string $temperature = "cold") {
+        $this->color = $color;
+        $this->price = $price;
+        $this->temperature = $temperature;
+    }
+
+    public function getInfo() :string {
+        return "This beverage is {$this->temperature} and {$this->color}.";
+    }
+}
+
+class Beer extends Beverage {
+    public $name, $alcoholpercentage;
+
+    public function __construct(string $name, float $alcoholpercentage, string $color, float $price) {
+        parent::__construct($color, $price);
+        $this->name = $name;
+        $this->alcoholpercentage = $alcoholpercentage;
+    }
+
+    public function getAlcoholpercentage() {
+        return $this->alcoholpercentage . "%";
+    }
+
+}
+
+$cola = new Beverage('black', 2);
+$duvel = new Beer("Duvel", 8.5, "blond", 3.5);
+echo $duvel->color;
+echo "<br>";
+echo $duvel->getInfo();
+echo "<br>";
+echo $duvel->getAlcoholpercentage();
+echo "<br>";
+echo $cola->getAlcoholpercentage();
+
+
+
